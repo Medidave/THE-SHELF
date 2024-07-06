@@ -1,0 +1,72 @@
+{% extends 'main.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<main>
+    <div class="home-container">
+        <input type="search" name="search-book" placeholder="Search for a book" class="book-search">
+    </div>
+
+    <div class="categories">
+        <div class="cat">
+            <a href="#">
+                <img src="{% static 'images/cat1.png' %}" alt="img" class="cat-image">
+                <p class="overlay">ENGINEERING</p>
+            </a>
+        </div>
+        <div class="cat">
+            <a href="#">
+                <img src="{% static 'images/cat2.png' %}" alt="img" class="cat-image">
+                <p class="overlay">ART</p>
+            </a>
+        </div>
+        <div class="cat">
+            <a href="#">
+                <img src="{% static 'images/cat3.png' %}" alt="img" class="cat-image">
+                <p class="overlay">BANKING</p>
+            </a>
+        </div>
+        <div class="cat">
+            <a href="#">
+                <img src="{% static 'images/cat4.png' %}" alt="img" class="cat-image">
+                <p class="overlay">ENTREPRENEURSHIP</p>
+            </a>
+        </div>
+        <div class="cat">
+            <a href="#">
+                <img src="{% static 'images/cat1.png' %}" alt="img" class="cat-image">
+                <p class="overlay">BUSINESS</p>
+            </a>
+        </div>
+        <div class="cat">
+            <a href="#">
+                <img src="{% static 'images/cat2.png' %}" alt="img" class="cat-image">
+                <p class="overlay">SOCIAL LIFE</p>
+            </a>
+        </div>
+        <div class="cat">
+            <a href="#">
+                <img src="{% static 'images/cat3.png' %}" alt="img" class="cat-image">
+                <p class="overlay">RELIGION</p>
+            </a>
+        </div>
+        <div class="cat">
+            <a href="#">
+                <img src="{% static 'images/cat2.png' %}" alt="img" class="cat-image">
+                <p class="overlay">EDUCATION</p>
+            </a>
+        </div>
+        <div class="cat">
+            <a href="#">
+                <img src="{% static 'images/cat5.png' %}" alt="img" class="cat-image">
+                <p class="overlay">ENTERTAINMENT</p>
+            </a>
+        </div>
+    </div>
+
+</main>
+
+
+{% endblock content %}

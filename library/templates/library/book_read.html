@@ -1,0 +1,122 @@
+{% extends 'main.html' %}
+
+{% load static %}
+
+
+{% block content %}
+
+<main class="the-main books">
+    <embed src="{% static 'pdfs/CampusCrowd.pdf' %}" type="application/pdf" width="60%" height="667px" />
+    <span class="the-spannn">
+        <div class="book-description-and-chat">
+            <h2>Book Details</h2>
+            <p>Name: Satelite Communication</p>
+            <p>Author: John Coy</p>
+            <p>Number of pages: 411</p>
+            <p class="the-p">Publish Date: 20/08/2025</p>
+            <span class="stars">
+                <p>Rating:</p>
+                <span>
+                <!-- <i class="ri-star-line hey"></i>
+                <i class="ri-star-line hey"></i>
+                <i class="ri-star-line hey"></i>
+                <i class="ri-star-line"></i>
+                <i class="ri-star-line"></i> -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 30 30" fill="red">
+                    <path d="M12.541 4.08927C13.5469 1.97025 16.4531 1.97024 17.459 4.08926L19.1974 7.75147C19.5968 8.59294 20.3689 9.17617 21.262 9.31111L25.1492 9.89837C27.3983 10.2382 28.2964 13.1119 26.6689 14.7614L23.8561 17.612C23.2099 18.267 22.9149 19.2107 23.0675 20.1355L23.7315 24.1607C24.1157 26.4897 21.7645 28.2658 19.7528 27.1662L16.276 25.2658C15.4772 24.8291 14.5228 24.8291 13.724 25.2658L10.2472 27.1662C8.23549 28.2658 5.88428 26.4897 6.26848 24.1607L6.93249 20.1355C7.08505 19.2107 6.79014 18.267 6.14385 17.612L3.33109 14.7614C1.70358 13.1119 2.60166 10.2382 4.85083 9.89837L8.73797 9.31111C9.63111 9.17617 10.4032 8.59294 10.8026 7.75147L12.541 4.08927Z" stroke="#28303F" stroke-width="1.5" stroke-linejoin="round"/>
+                </svg>
+    
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 30 30" fill="red">
+                    <path d="M12.541 4.08927C13.5469 1.97025 16.4531 1.97024 17.459 4.08926L19.1974 7.75147C19.5968 8.59294 20.3689 9.17617 21.262 9.31111L25.1492 9.89837C27.3983 10.2382 28.2964 13.1119 26.6689 14.7614L23.8561 17.612C23.2099 18.267 22.9149 19.2107 23.0675 20.1355L23.7315 24.1607C24.1157 26.4897 21.7645 28.2658 19.7528 27.1662L16.276 25.2658C15.4772 24.8291 14.5228 24.8291 13.724 25.2658L10.2472 27.1662C8.23549 28.2658 5.88428 26.4897 6.26848 24.1607L6.93249 20.1355C7.08505 19.2107 6.79014 18.267 6.14385 17.612L3.33109 14.7614C1.70358 13.1119 2.60166 10.2382 4.85083 9.89837L8.73797 9.31111C9.63111 9.17617 10.4032 8.59294 10.8026 7.75147L12.541 4.08927Z" stroke="#28303F" stroke-width="1.5" stroke-linejoin="round"/>
+                </svg>
+    
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 30 30" fill="red">
+                    <path d="M12.541 4.08927C13.5469 1.97025 16.4531 1.97024 17.459 4.08926L19.1974 7.75147C19.5968 8.59294 20.3689 9.17617 21.262 9.31111L25.1492 9.89837C27.3983 10.2382 28.2964 13.1119 26.6689 14.7614L23.8561 17.612C23.2099 18.267 22.9149 19.2107 23.0675 20.1355L23.7315 24.1607C24.1157 26.4897 21.7645 28.2658 19.7528 27.1662L16.276 25.2658C15.4772 24.8291 14.5228 24.8291 13.724 25.2658L10.2472 27.1662C8.23549 28.2658 5.88428 26.4897 6.26848 24.1607L6.93249 20.1355C7.08505 19.2107 6.79014 18.267 6.14385 17.612L3.33109 14.7614C1.70358 13.1119 2.60166 10.2382 4.85083 9.89837L8.73797 9.31111C9.63111 9.17617 10.4032 8.59294 10.8026 7.75147L12.541 4.08927Z" stroke="#28303F" stroke-width="1.5" stroke-linejoin="round"/>
+                </svg>
+    
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 30 30" fill="#D9D9D9">
+                    <path d="M12.541 4.08927C13.5469 1.97025 16.4531 1.97024 17.459 4.08926L19.1974 7.75147C19.5968 8.59294 20.3689 9.17617 21.262 9.31111L25.1492 9.89837C27.3983 10.2382 28.2964 13.1119 26.6689 14.7614L23.8561 17.612C23.2099 18.267 22.9149 19.2107 23.0675 20.1355L23.7315 24.1607C24.1157 26.4897 21.7645 28.2658 19.7528 27.1662L16.276 25.2658C15.4772 24.8291 14.5228 24.8291 13.724 25.2658L10.2472 27.1662C8.23549 28.2658 5.88428 26.4897 6.26848 24.1607L6.93249 20.1355C7.08505 19.2107 6.79014 18.267 6.14385 17.612L3.33109 14.7614C1.70358 13.1119 2.60166 10.2382 4.85083 9.89837L8.73797 9.31111C9.63111 9.17617 10.4032 8.59294 10.8026 7.75147L12.541 4.08927Z" stroke="#28303F" stroke-width="1.5" stroke-linejoin="round"/>
+                </svg>
+    
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 30 30" fill="#D9D9D9">
+                    <path d="M12.541 4.08927C13.5469 1.97025 16.4531 1.97024 17.459 4.08926L19.1974 7.75147C19.5968 8.59294 20.3689 9.17617 21.262 9.31111L25.1492 9.89837C27.3983 10.2382 28.2964 13.1119 26.6689 14.7614L23.8561 17.612C23.2099 18.267 22.9149 19.2107 23.0675 20.1355L23.7315 24.1607C24.1157 26.4897 21.7645 28.2658 19.7528 27.1662L16.276 25.2658C15.4772 24.8291 14.5228 24.8291 13.724 25.2658L10.2472 27.1662C8.23549 28.2658 5.88428 26.4897 6.26848 24.1607L6.93249 20.1355C7.08505 19.2107 6.79014 18.267 6.14385 17.612L3.33109 14.7614C1.70358 13.1119 2.60166 10.2382 4.85083 9.89837L8.73797 9.31111C9.63111 9.17617 10.4032 8.59294 10.8026 7.75147L12.541 4.08927Z" stroke="#28303F" stroke-width="1.5" stroke-linejoin="round"/>
+                </svg>
+                </span>
+            </span>
+    
+        </div>
+    
+        <div class="chats-container">
+            <h3 class="chat">CHAT</h3>
+            <div class="x">
+                <span class="message">
+                    <span class="user-info">
+                        <img src="{% static 'images/dave1.jpg' %}" alt="img" class="user-image">
+                        <p>Dave, The CEO</p>
+                    </span>
+                    <p class="the-chat heyyyy">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime minus ipsam provident veniam numquam deserunt asperiores, a sunt! Corporis, laboriosam?
+                    </p>
+                </span>
+    
+                <span class="message">
+                    <span class="user-info">
+                        <img src="{% static 'images/dave1.jpg' %}" alt="img" class="user-image">
+                        <p>Dave, The CEO</p>
+                    </span>
+                    <p class="the-chat heyyyy">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime minus ipsam provident veniam numquam deserunt asperiores, a sunt! Corporis, laboriosam?
+                    </p>
+                </span>
+    
+                <span class="message">
+                    <span class="user-info">
+                        <img src="{% static 'images/dave1.jpg' %}" alt="img" class="user-image">
+                        <p>Dave, The CEO</p>
+                    </span>
+                    <p class="the-chat heyyyy">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime minus ipsam provident veniam numquam deserunt asperiores, a sunt! Corporis, laboriosam?
+                    </p>
+                </span>
+    
+                <span class="message request-user">
+                    <p class="the-chat heyyyy-message request-user-message">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime minus ipsam provident veniam numquam deserunt asperiores, a sunt! Corporis, laboriosam?
+                    </p>
+                </span>
+
+                <span class="message">
+                    <span class="user-info">
+                        <img src="{% static 'images/dave1.jpg' %}" alt="img" class="user-image">
+                        <p>Dave, The CEO</p>
+                    </span>
+                    <p class="the-chat heyyyy">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime minus ipsam provident veniam numquam deserunt asperiores, a sunt! Corporis, laboriosam?
+                    </p>
+                </span>
+
+                <span class="message">
+                    <span class="user-info">
+                        <img src="{% static 'images/dave1.jpg' %}" alt="img" class="user-image">
+                        <p>Dave, The CEO</p>
+                    </span>
+                    <p class="the-chat heyyyy">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime minus ipsam provident veniam numquam deserunt asperiores, a sunt! Corporis, laboriosam?
+                    </p>
+                </span>
+
+            </div>
+
+            <form action="" method="POST">
+                {% csrf_token %}
+                <div class="chat-send">
+                    <input type="text" name="search-book" placeholder="Write a message..." class="chat-input">
+                    <img src="{% static 'images/send.png' %}" alt="img" class="send">
+                </div>
+            </form>
+        </div>
+    </span>
+    
+</main>
+
+{% endblock content %} 

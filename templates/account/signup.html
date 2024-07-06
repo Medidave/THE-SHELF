@@ -1,0 +1,61 @@
+{% extends 'main.html' %}
+
+{% load static %}
+
+{% load socialaccount %}
+
+{% block content %}
+
+<main class="the-main">
+
+    <form action="{% url 'account_signup' %}" method="POST" class="forms">
+        {% csrf_token %}
+
+        <div class="login-container">
+            <div class="logins">
+                
+                {% include 'messages.html' %}
+
+                <span>
+                    <label for="first_name">First Name:</label>
+                    <input type="text" class="form-control" required id="first_name" name="first_name" placeholder="Enter your first name">
+                </span>
+    
+                <!-- <span>
+                    <label for="last_name">Last Name:</label>
+                    <input type="text" class="form-control" required id="last_name" name="last_name" placeholder="Enter your last name">
+                </span> -->
+    
+    
+                <span>
+                    <label for="username">Username:</label>
+                    <input type="text" class="form-control" required id="username" name="username" placeholder="Enter your first password">
+                </span>
+    
+                <span>
+                    <label for="password">Password:</label>
+                    <input type="password" class="form-control" required id="password" name="password1" placeholder="Enter password">
+                </span>
+    
+                <span>
+                    <label for="password">Confirm Password:</label>
+                    <input type="password" class="form-control" required id="password" name="password2" placeholder="confirm password">
+                    <a href="#" class="forgot"><p>Forgot Password?</p></a>
+                </span>
+    
+    
+                <button class="btn">Sign in</button>
+                <a href="{% provider_login_url 'google' %}?next=/" class="google">
+                    <img src="{% static 'images/go.png' %}" alt="img" class="go">
+                    <p>Continue with google</p>
+                </a>
+            </div>
+            <img src="{% static 'images/signup.png' %}" alt="img" class="login">
+        </div>
+
+    </form>
+
+</main>
+
+
+{% endblock content %} 

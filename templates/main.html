@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE SHELF</title>
+    <!-- Remix icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="{% static 'styles/css/main.css' %}"/>
+    <link rel="stylesheet" href="{% static 'styles/css/mobile_styles.css' %}"/>
+</head>
+<body>
+   
+     <!-- Horizontal navigation -->
+     {% include 'navigation_bar.html' %}
+
+     {% block content %}
+ 
+         <!-- THE BODY OF ALL DOCUMENTS GO HERE     -->
+ 
+     {% endblock content %}
+
+     <!-- Footer -->
+      {% comment %}
+    {% include 'footer.html' %}
+    {% endcomment %}
+</body>
+
+<!-- SCRIPTS -->
+<script src="{% static 'styles/js/main.js' %}"></script>
+
+</html>
+

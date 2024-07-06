@@ -1,0 +1,43 @@
+{% extends 'main.html' %}
+
+{% load static %}
+
+{% load socialaccount %}
+
+{% block content %}
+
+<main class="the-main">
+
+    
+    <form action="{% url 'account_login' %}" method="POST" class="forms">
+        {% csrf_token %}
+        <div class="login-container">
+
+            <div class="logins">
+                {% include 'messages.html' %}
+
+                <span>
+                    <label for="username">Username:</label>
+                    <input type="text" class="form-control" required id="username" name="login" placeholder="Enter password">
+                </span>
+    
+                <span>
+                    <label for="password">Password:</label>
+                    <input type="password" class="form-control" required id="password" name="password" placeholder="Enter password">
+                    <a href="#" class="forgot"><p>Forgot Password?</p></a>
+                </span>
+    
+                <button class="btn">Sign in</button>
+                <a href="{% provider_login_url 'google' %}?next=/" class="google">
+                    <img src="{% static 'images/go.png' %}" alt="img" class="go">
+                    <p>Continue with google</p>
+                </a>
+            </div>
+            <img src="{% static 'images/login.png' %}" alt="img" class="login">
+        </div>
+    </form>
+
+</main>
+
+
+{% endblock content %}
