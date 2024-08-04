@@ -9,3 +9,7 @@ urlpatterns = [
     path('users/', include('library.urls')),
 
 ]
+
+# Configure admin titles
+admin.site.site_header = "THE_SHELF"
+admin.site.site_title = "THE_SHELF"

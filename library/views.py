@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.contrib.auth import logout
+from django.http import JsonResponse
+from .models import *
 
 # Create your views here.
 def home(request):
@@ -24,7 +26,43 @@ def log_out(request):
     return render(request, 'account/login.html')
 
 def read(request):
+    messages = Message.objects.all()
     
-    return render(request, 'library/book_read.html')
+    context = {
+        'messages': messages,
+    }
+    
+    return render(request, 'library/book_read.html', context)
 
 
+
+def createMessage(request, pk):
+    if request.method == 'POST':
+        message = request.POST.get('message')
+        # print(message)
+        # print("\n\n\n")
+    Message.objects.create(
+        user=request.user,
+        message=message
+    )
+    
+    json_message = []
+    messages = Message.objects.all()
+    for message in messages:
+        if message.user.last_name == request.user.last_name:
+            is_user = True
+        else:
+            is_user = False
+            
+        json_message.append(
+            {
+                'user_name': message.user.first_name + " " + message.user.last_name,
+                'message': message.message,
+                'created': message.created,
+                'is_user': is_user,
+            }
+        )
+    
+    print(message)
+    
+    return JsonResponse({'status': 'success', 'message': 'Project usstared', 'json_message': json_message})

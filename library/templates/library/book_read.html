@@ -49,69 +49,32 @@
         <div class="chats-container">
             <h3 class="chat">CHAT</h3>
             <div class="x">
+
+                {% for message in messages %}
+                {% if message.user != request.user %}
                 <span class="message">
                     <span class="user-info">
                         <img src="{% static 'images/dave1.jpg' %}" alt="img" class="user-image">
-                        <p>Dave, The CEO</p>
+                        <p>{{message.user.first_name}} {{message.user.last_name}}</p>
                     </span>
-                    <p class="the-chat heyyyy">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime minus ipsam provident veniam numquam deserunt asperiores, a sunt! Corporis, laboriosam?
-                    </p>
+                    <p class="the-chat heyyyy">{{ message.message }}</p>
                 </span>
-    
-                <span class="message">
-                    <span class="user-info">
-                        <img src="{% static 'images/dave1.jpg' %}" alt="img" class="user-image">
-                        <p>Dave, The CEO</p>
-                    </span>
-                    <p class="the-chat heyyyy">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime minus ipsam provident veniam numquam deserunt asperiores, a sunt! Corporis, laboriosam?
-                    </p>
-                </span>
-    
-                <span class="message">
-                    <span class="user-info">
-                        <img src="{% static 'images/dave1.jpg' %}" alt="img" class="user-image">
-                        <p>Dave, The CEO</p>
-                    </span>
-                    <p class="the-chat heyyyy">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime minus ipsam provident veniam numquam deserunt asperiores, a sunt! Corporis, laboriosam?
-                    </p>
-                </span>
-    
+
+                {% else %}
+
                 <span class="message request-user">
-                    <p class="the-chat heyyyy-message request-user-message">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime minus ipsam provident veniam numquam deserunt asperiores, a sunt! Corporis, laboriosam?
-                    </p>
+                    <p class="the-chat heyyyy-message request-user-message">{{ message.message }} </p>  
                 </span>
-
-                <span class="message">
-                    <span class="user-info">
-                        <img src="{% static 'images/dave1.jpg' %}" alt="img" class="user-image">
-                        <p>Dave, The CEO</p>
-                    </span>
-                    <p class="the-chat heyyyy">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime minus ipsam provident veniam numquam deserunt asperiores, a sunt! Corporis, laboriosam?
-                    </p>
-                </span>
-
-                <span class="message">
-                    <span class="user-info">
-                        <img src="{% static 'images/dave1.jpg' %}" alt="img" class="user-image">
-                        <p>Dave, The CEO</p>
-                    </span>
-                    <p class="the-chat heyyyy">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime minus ipsam provident veniam numquam deserunt asperiores, a sunt! Corporis, laboriosam?
-                    </p>
-                </span>
-
+                {% endif %}
+                {% endfor %}
+    
             </div>
 
             <form action="" method="POST">
                 {% csrf_token %}
                 <div class="chat-send">
                     <input type="text" name="search-book" placeholder="Write a message..." class="chat-input">
-                    <img src="{% static 'images/send.png' %}" alt="img" class="send">
+                    <button class="send" id="send"><img src="{% static 'images/send.png' %}" alt="img"></button>
                 </div>
             </form>
         </div>
